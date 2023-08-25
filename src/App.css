@@ -1,10 +1,25 @@
 .App {
   text-align: center;
-   
+}
+.App ul li{
+  list-style-type: none;
+ 
+}
+.App ul li a{
+  margin: 100px;
+  /* color: black;  */
+}
+
+.App ul{
+  
+  background-color: black;
+  display: flex;
+  justify-content: center;
+  
+  
 }
 
 .App-logo {
-  height: 40vmin;
   pointer-events: none;
 }
 

@@ -1,3 +1,14 @@
-.Links{ 
-    margin: 100px ;
+
+.lala ul li a{
+ margin: 10px;
+ list-style: none;
+ color: black; 
+}
+.lala ul{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.lala ul li{
+    list-style-type: none;
 }

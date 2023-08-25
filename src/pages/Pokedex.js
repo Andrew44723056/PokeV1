@@ -2,7 +2,7 @@ import React from 'react';
 
 function Pokedex(){
     return(
-        <h1>kvneivbrvnrklvjd</h1>
+        <h3>Aqui va el pokedex, Proximamente</h3>
     )
 
 }

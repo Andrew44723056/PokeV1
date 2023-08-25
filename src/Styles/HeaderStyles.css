@@ -1,7 +1,63 @@
 .imgPokemones{
     max-width: 200px;
+    width: 100%;
+    border:5px solid black;
+    background-color:darkcyan;
+    margin: 50px;
+    
 }
 .contenedor{
-   
- 
+  border:5px solid black;
+  background-color:darkturquoise;  
+  font-size: 19px;
+   display: flex;
 }
+
+    .lolo {
+        font-size: 17px;
+        background: transparent;
+        border: none;
+        padding: 1em 1.5em;
+        color:blueviolet;
+        text-transform: uppercase;
+        position: relative;
+        transition: .5s ease;
+      }
+      
+      .lolo::before {
+        content: '';
+        position: absolute;
+        left: 0;
+        bottom: 0;
+        height: 2px;
+        width: 0;
+        background-color:aliceblue;
+        transition: .5s ease;
+      }
+      
+      .lolo:hover {
+        color: white;
+        transition-delay: .5s;
+      }
+      
+      .lolo:hover::before {
+        width: 100%;
+      }
+      
+      .lolo::after {
+        content: '';
+        position: absolute;
+        left: 0;
+        bottom: 0;
+        height: 0;
+        width: 100%;
+        /* background-color:aqua; */
+        transition: .4s ease;
+        z-index: -1;
+      }
+      
+      .lolo:hover::after {
+        height: 100%;
+        transition-delay: 0.4s;
+        color: aliceblue;
+      }
