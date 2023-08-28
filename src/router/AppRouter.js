@@ -4,7 +4,7 @@ import Navbar from "../components/Navbar";
 import Home from "../pages/Home";
 import About from "../pages/About";
 import Pokedex from "../pages/Pokedex";
-import '../App.css'
+import "../App.css";
 
 function AppRouter() {
   return (

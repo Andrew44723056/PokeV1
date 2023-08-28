@@ -31,14 +31,11 @@ function Pokemones() {
     };
     fetchRandomPokemon();
   }, []);
-  
 
   return (
     <div className="contenedor">
       {isLoading ? (
-        
         randomPokemons.map((item, index) => (
-          
           <div key={index}>
             <img
               className="imgPokemones"
@@ -48,40 +45,10 @@ function Pokemones() {
             <p>{item.name}</p>
           </div>
         ))
-        ) : (
-          <h2 className="pedro"></h2>
-          )}
+      ) : (
+        <h2 className="pedro"></h2>
+      )}
     </div>
   );
-
-
-
-
-
-
-
-
-
-
-  // return (
-  //   <div className="contenedor">
-  //     {isLoading ? (
-  //       randomPokemons.map((item, index) => {
-  //         return (
-  //           <div key={item.index}>
-  //             <img
-  //               className="imgPokemones"
-  //               src={item.sprites.other["official-artwork"]["front_default"]}
-  //             />
-  //             <p>{item.name}</p>
-  //           </div>
-  //         );
-  //       })
-  //       ) : (
-  //         <h2 className="lolo">Esta Cargando...</h2>
-  //         )}
-  //   </div>
-  // );
 }
-
 export default Pokemones;

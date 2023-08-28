@@ -1,9 +1,6 @@
-import React from 'react';
+import React from "react";
 
-function Pokedex(){
-    return(
-        <h3>Aqui va el pokedex, Proximamente</h3>
-    )
-
+function Pokedex() {
+  return <h3>Aqui va el pokedex, Proximamente</h3>;
 }
-export default Pokedex
+export default Pokedex;
