@@ -5,19 +5,12 @@
   list-style-type: none;
  
 }
-.App ul li a{
-  /* margin: 100px; */
-  /* color: black;  */
-}
 
 .App ul{
   
   background-color: black;
   display: flex;
   justify-content: space-around;
-
-  
-  
 }
 
 .App-logo {

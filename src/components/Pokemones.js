@@ -48,9 +48,9 @@ function Pokemones() {
             <p>{item.name}</p>
           </div>
         ))
-      ) : (
-        <h2 className="lolo">Está Cargando...</h2>
-      )}
+        ) : (
+          <h2 className="pedro"></h2>
+          )}
     </div>
   );
 
