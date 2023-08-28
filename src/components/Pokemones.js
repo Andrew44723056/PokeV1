@@ -2,16 +2,14 @@ import React, { useState, useEffect } from "react";
 import "../Styles/HeaderStyles.css";
 
 function Pokemones() {
-  // const [user, setUser] = useState([]);
   const [randomPokemons, setRandomPokemons] = useState([]);
   const [isLoading, setisLoading] = useState(false);
 
   useEffect(() => {
     const fetchRandomPokemon = async () => {
       try {
-        const getRandomPokemonId = () => Math.floor(Math.random() * 200) + 1; // funcion que trae aleatorios
-        //[100, 4,30,25]
-        const pokemonIds = Array.from({ length: 4 }, getRandomPokemonId); // Array .from(tamañ, contenido o como llenar el contenido)
+        const getRandomPokemonId = () => Math.floor(Math.random() * 900) + 1; // funcion que trae aleatorios
+        const pokemonIds = Array.from({ length: 8 }, getRandomPokemonId); // Array .from(tamañ, contenido o como llenar el contenido)
 
         const fetchedPokemons = [];
 
