@@ -8,8 +8,8 @@ function Pokemones() {
   useEffect(() => {
     const fetchRandomPokemon = async () => {
       try {
-        const getRandomPokemonId = () => Math.floor(Math.random() * 900) + 1; // funcion que trae aleatorios
-        const pokemonIds = Array.from({ length: 8 }, getRandomPokemonId); // Array .from(tamañ, contenido o como llenar el contenido)
+        const getRandomPokemonId = () => Math.floor(Math.random() * 500) + 1; // funcion que trae aleatorios
+        const pokemonIds = Array.from({ length: 8}, getRandomPokemonId); // Array .from(tamañ, contenido o como llenar el contenido)
 
         const fetchedPokemons = [];
 
