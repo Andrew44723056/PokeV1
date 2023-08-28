@@ -1,5 +1,5 @@
 import React from "react";
-import "../Styles/Contenido.css";
+
 
 function Contenido() {
   return (
