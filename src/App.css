@@ -6,7 +6,7 @@
  
 }
 .App ul li a{
-  margin: 100px;
+  /* margin: 100px; */
   /* color: black;  */
 }
 
@@ -14,7 +14,8 @@
   
   background-color: black;
   display: flex;
-  justify-content: center;
+  justify-content: space-around;
+
   
   
 }

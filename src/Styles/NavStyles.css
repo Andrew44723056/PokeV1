@@ -2,7 +2,7 @@
 .lala ul li a{
  margin: 10px;
  list-style: none;
- color: black; 
+ color: rgb(249, 8, 8); 
 }
 .lala ul{
     display: flex;

@@ -1,16 +1,18 @@
 .imgPokemones{
     max-width: 200px;
-    width: 100%;
+    /* width: 100%; */
     border:5px solid black;
     background-color:darkcyan;
-    margin: 50px;
+    margin: 10px;
     
 }
 .contenedor{
   border:5px solid black;
   background-color:darkturquoise;  
-  font-size: 19px;
+  /* font-size: 19px; */
    display: flex;
+   flex-wrap: wrap;
+   justify-content: center;
 }
 
     .lolo {
