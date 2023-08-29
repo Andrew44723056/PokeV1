@@ -1,5 +1,5 @@
 import React, {useState} from 'react';
-import './ThemeSelector.css'
+import '../Styles/ThemeSelector.css'
 
 
 
