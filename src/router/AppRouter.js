@@ -5,11 +5,13 @@ import Home from "../pages/Home";
 import About from "../pages/About";
 import Pokedex from "../pages/Pokedex";
 import "../App.css";
+import ThemeSelector from "../components/ThemeSelector";
 
 function AppRouter() {
   return (
     <div className="App">
       <Navbar />
+      <ThemeSelector/>
       <Routes>
         <Route path="/" element={<Home />} />
         <Route path="/about" element={<About />} />
