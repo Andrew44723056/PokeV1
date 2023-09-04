@@ -1,12 +1,10 @@
 import React from "react";
 import { Link } from "react-router-dom";
 import "../Styles/HeaderStyles.css";
-
-
-
 function Navbar() {
   return (
     <nav>
+
       <ul className="lala">
         <li>
           <Link to="/">

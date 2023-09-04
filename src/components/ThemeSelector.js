@@ -1,8 +1,6 @@
 import React, {useState} from 'react';
 import '../Styles/ThemeSelector.css'
-
-
-
+ 
 function ThemeSelector(){
     //isDarkMode (true/false)
      const [isDarkMode, setIsDarkMode] = useState (false); // false -> lightmode
@@ -18,4 +16,8 @@ function ThemeSelector(){
      </header> 
    </div>);
   }
-  export default ThemeSelector;
+
+export default ThemeSelector;
+
+
+
