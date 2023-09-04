@@ -1,12 +1,16 @@
-import React, { createContext } from "react";
-import { Pokedex2 } from "../components/Pokedex2";
-import '../Styles/Pokedex2.css';
+import React, { Component, createContext } from "react"
+import '../Styles/ComponenteCarta.css'
+import '../Styles/ComponenteLista.css'
+// import { ComponenteCarta } from "../components/ComponenteCarta";
+import { ComponenteLista } from "../components/ComponenteLista";
 
 
 function Pokedex() {
   return <div>
-    <h1>Pokemonos</h1>;
-    <Pokedex2/>
+    <h1>Pokemones</h1>
+    <ComponenteLista/>
+    {/* <ComponenteCarta/> */}
+
   </div>
 }
 export default Pokedex;

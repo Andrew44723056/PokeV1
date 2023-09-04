@@ -1,13 +1,14 @@
 import React, { useState, useEffect } from "react";
-import '../Styles/Pokedex2.css';
+import '../Styles/ComponenteCarta.css'
 
 
-function Pokedex2() {
+function ComponenteCarta() {
   const [pokemonData, setPokemonData] = useState(null);
-  const idpokemon = Math.floor(Math.random() * (251 - 1), 0);
+  // const idpokemon = Math.floor(Math.random() * (251 - 1), 0);
 
   useEffect(() => {
-    fetch (`https:pokeapi.co/api/v2/pokemon/${idpokemon}`)
+    fetch ('https://pokeapi.co/api/v2/pokemon/bulbasaur/')
+    // fetch ('https://pokeapi.co/api/v2/characteristic/pikachu')
       .then((response) => response.json())
       .then((data) => setPokemonData(data))
       .catch((error) => console.error("Error fetching data:", error));
@@ -15,7 +16,8 @@ function Pokedex2() {
 
   return (
     <div>
-      <h1 id="pepe">Pokemons</h1>
+        <input className="piña" placeholder="Buscar"></input>
+      <h1 id="pepe"></h1>
       {pokemonData ? (
           <div>
           <p>Nombre: {pokemonData.name}</p>
@@ -28,4 +30,4 @@ function Pokedex2() {
           )}
     </div>
   )};
-  export {Pokedex2};
+  export {ComponenteCarta};
