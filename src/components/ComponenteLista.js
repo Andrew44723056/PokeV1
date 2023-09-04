@@ -1,9 +1,10 @@
 import React, { useState, useEffect } from "react";
-// import { ComponenteCarta } from "./ComponenteCarta";
+import { ComponenteCarta } from "./ComponenteCarta";
 import '../Styles/ComponenteLista.css'
 
 
 function ComponenteLista() {
+  <ComponenteCarta/>
     const [pokemonData, setPokemonData] = useState(null);  
     useEffect(() => {
       fetch ('https://pokeapi.co/api/v2/pokemon/bulbasaur/')
