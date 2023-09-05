@@ -1,56 +1,51 @@
 import React, { useState, useEffect } from "react";
-// import { getPokemonList } from "./Api";
-// import { ComponenteCarta } from "./ComponenteCarta";
-import '../Styles/ComponenteLista.css'
+import "../Styles/ComponenteLista.css";
 import { getPokemonList } from "../components/Api";
 
-
 function ComponenteLista() {
-  const [pokemonData, setPokemonData] = useState(null);  
-  // <ComponenteCarta/>
+  const [pokemonData, setPokemonData] = useState(null);
+  const [isLoading, setisLoading] = useState(false);
   useEffect(() => {
-    
-      const fetchPokemon = async () => {
+    const fetchPokemon = async () => {
+      try {
+        const url = "https://pokeapi.co/api/v2/pokemon/Limit=20";
+        const response = await getPokemonList(url);
 
-       try {
-         const url = "https://pokeapi.co/api/v2/pokemon?Limit=20"
-         const response= await getPokemonList(url);
-         
+        const data = response.array;
 
-         console.log("holaaaa",response);
-         const data=response.array
-         console.log(data);
-         
-         setPokemonData(data);
-
-       }
-       
-       catch (error) {
-        console.error("Error capturando la Pokemon data",error);
+        setPokemonData(data);
+      } catch (error) {
+        console.error("Error capturando la Pokemon data", error);
         return null;
-    } 
       }
+      setisLoading(true);
+    };
 
-      fetchPokemon();
-    
+    fetchPokemon();
+  }, []);
 
-      // fetch ('https://pokeapi.co/api/v2/pokemon/charmander/')
-      // // fetch ('https://pokeapi.co/api/v2/pokemon?limit=20')
-        // .then((response) => response.json())
-        // .then((data) => setPokemonData(data))
-        // .catch((error) => console.error("Error fetching data:", error));
-    }, []);
-  
-    return (
-        <div>
-          <input className="piña" placeholder="Buscar"></input>
-        {pokemonData ? (
+  return (
+    <div>
+      <input className="piña" placeholder="Buscar"></input>
+      {isLoading ? (
+        pokemonData.map((item) => {
+          return (
             <div>
-            <img className="card" src={pokemonData.sprites.other["official-artwork"]["front_default"]}/>
-           </div>
-        ) : (
-            <p>Cargando información ...</p>
-            )}
-      </div>
-    )};
-    export {ComponenteLista};
+              <img className="card"src={item.image} />
+              <p>{item.name}</p>
+              <p>{item.id}</p>
+            </div>
+          );
+        })
+      ) : (
+        <div class="container">
+          <h2 id="loader"></h2>
+          <div class="loader"></div>
+          <div class="loader"></div>
+          <div class="loader"></div>
+        </div>
+      )}
+    </div>
+  );
+}
+export { ComponenteLista };
