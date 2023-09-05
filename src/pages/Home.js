@@ -1,6 +1,7 @@
 import React from "react";
 import Pokemones from "../components/Pokemones";
 import Contenido from "../components/Contenido";
+// import ThemeSelector from "../components/ThemeSelector"
 
 function Home() {
   return (
@@ -14,6 +15,7 @@ function Home() {
       </h5>
       <Pokemones />
       <Contenido />
+      {/* <ThemeSelector/> */}
     </div>
   );
 }
