@@ -1,0 +1,32 @@
+.card {         
+    display: inline-table;
+    margin: 20px;
+    box-sizing: border-box;
+    width: 147px;
+    width: 100px;
+    height: 172px;
+    background: rgba(217, 217, 217, 0.58);
+    /* border: 1px solid rgb(248, 6, 6); */
+    box-shadow: 12px 17px 51px rgba(0, 0, 0, 0.22);
+    backdrop-filter: blur(6px);
+    border-radius: 20px;
+    text-align: center;
+    cursor: pointer;
+    transition: all 0.5s;
+    user-select: none;
+    font-weight: bolder;
+    color: black; 
+  }
+
+  .card:hover {
+     border: 1px solid black;
+    transform: scale(1.05); 
+  }
+  
+  .card:active {
+     transform: scale(0.95) rotateZ(1.7deg); 
+  }
+
+  .prueba{
+    display: inline-block;
+  }

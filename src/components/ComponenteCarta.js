@@ -1,30 +1,25 @@
 import React, { useState, useEffect } from "react";
-import '../Styles/ComponenteCarta.css'
+import "../Styles/ComponenteCarta.css";
+import { Link } from "react-router-dom";
 
-
-function ComponenteCarta() {
-  const [pokemonData, setPokemonData] = useState(null);
-
-  useEffect(() => {
-    fetch ('https://pokeapi.co/api/v2/pokemon/bulbasaur/')
-      .then((response) => response.json())
-      .then((data) => setPokemonData(data))
-      .catch((error) => console.error("Error fetching data:", error));
-  }, []);
-
+function ComponenteCarta({ pokemonData }) {
   return (
-    <div>
-      
-      
-      {pokemonData ? (
-          <div>
-          <p>Nombre: {pokemonData.name}</p>
-          <p>Peso: {pokemonData.weight}</p>
-          <p>Altura: {pokemonData.height}</p>
+    <div className="prueba">
+        <div >
+          <Link to={"/detalle"}>
+            {pokemonData ? (
+              <div className="card">
+                <img className="ppp" src={pokemonData.image} />
+                <p>{pokemonData.name}</p>
+                <p>{pokemonData.id}</p>
+              </div>
+            ) : (
+              <div></div>
+            )}
+          </Link>
         </div>
-      ) : (
-          <p>Cargando información ...</p>
-          )}
     </div>
-  )};
-  export {ComponenteCarta};
+    
+  );
+}
+export { ComponenteCarta };

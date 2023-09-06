@@ -1,11 +1,5 @@
-#pepa{
-  border-radius: 100px;
-  overflow: auto;
-  resize: both;
-  box-shadow:  0px 0px 90px 9px #000;
-} 
-
 .piña {
+  display: flex;
   height: 20px;
   margin: 40px;
   max-width: 190px;
@@ -20,35 +14,15 @@
   border-radius: 25px;
 }
 
-
-.card {
-    margin: 20px;
-    box-sizing: border-box;
-  width: 147px;
-  height: 172px;
-  background: rgba(217, 217, 217, 0.58);
-  border: 1px solid white;
-  box-shadow: 12px 17px 51px rgba(0, 0, 0, 0.22);
-  backdrop-filter: blur(6px);
-  border-radius: 20px;
-  /* text-align: center; */
-  cursor: pointer;
-  transition: all 0.5s;
-  user-select: none;
-  font-weight: bolder;
-  color: black;
-  
+ .pagination{
+     color: white !important;
 }
-
-.card:hover {
-  border: 1px solid black;
-  transform: scale(1.05);
-}
-
-.card:active {
-  transform: scale(0.95) rotateZ(1.7deg);
-}
-
+ 
+ .ppp{
+  width: 100px;
+    display: flex;
+    flex-direction: column;
+}  
 
 .loader {
   position: absolute;
@@ -84,9 +58,9 @@
   border-radius: 0 0 5px 5px;
   background: #6bb2cd;
   animation-name: dot3_;
-}
+} 
 
-@keyframes dot1_ {
+ @keyframes dot1_ {
   3%,97% {
     width: 160px;
     height: 100px;
@@ -155,4 +129,5 @@
     margin-top: -37px;
     border-radius: 10px;
   }
-}
+
+}  
