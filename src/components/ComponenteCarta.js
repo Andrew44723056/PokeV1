@@ -4,7 +4,7 @@ import { Link } from "react-router-dom";
 
 function ComponenteCarta({ pokemonData }) {
   return (
-    <div className="prueba">
+    <div className="papadiv">
         <div >
           <Link to={"/detalle"}>
             {pokemonData ? (
