@@ -18,7 +18,7 @@ function ComponenteCarta({ pokemonData }) {
             )}
           </Link>
         </div>
-    </div>
+        </div>
     
   );
 }

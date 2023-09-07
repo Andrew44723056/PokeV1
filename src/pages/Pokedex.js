@@ -6,7 +6,7 @@ import { ComponenteLista } from "../components/ComponenteLista";
 
 function Pokedex() {
   return <div>
-    <h1>Pokemones</h1>
+    <h1>Pokemons</h1>
     <ComponenteLista/>
     </div>
 }

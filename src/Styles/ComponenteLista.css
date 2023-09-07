@@ -9,78 +9,70 @@
   font-size: 18px;
   color: #555;
   padding: 15px 5px 10px 20px;
-  box-shadow: inset 8px 8px 8px #cbced1,
-  inset -8px -8px 8px #ffffff;
+  box-shadow: inset 8px 8px 8px #cbced1, inset -8px -8px 8px #ffffff;
   border-radius: 25px;
 }
 
-
 .momo {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    gap: 10px;
-    font-family: inherit;
-    font-size: 13px;
-    font-weight: 500;
-    text-transform: uppercase;
-    letter-spacing: 0.4px;
-    /* color: #7e97b8; */
-    background-color: #e0e8ef;
-    border-style: solid;
-    border-width: 2px 2px 2px 2px;
-    /* border-color: rgba(255, 255, 255, 0.333); */
-    border-radius: 40px 40px 40px 40px;
-    padding: 16px 24px 16px 28px;
-    transform: translate(0px, 0px) rotate(0deg);
-    transition: 0.2s;
-    box-shadow: -4px -2px 16px 0px #ffffff, 4px 2px 16px 0px rgb(95 157 231 / 48%);
-   }
-   
-   .momo:hover {
-    color: #516d91;
-    background-color: #E5EDF5;
-    box-shadow: -2px -1px 8px 0px #ffffff, 2px 1px 8px 0px rgb(95 157 231 / 48%);
-   }
-   
-   .momo:active {
-    box-shadow: none;
-   }
-
-.papap-de-input-bottom{
   display: flex;
   align-items: center;
-  flex-direction: column; 
+  justify-content: center;
+  gap: 10px;
+  font-family: inherit;
+  font-size: 13px;
+  font-weight: 500;
+  text-transform: uppercase;
+  letter-spacing: 0.4px;
+  /* color: #7e97b8; */
+  background-color: #e0e8ef;
+  border-style: solid;
+  border-width: 2px 2px 2px 2px;
+  /* border-color: rgba(255, 255, 255, 0.333); */
+  border-radius: 40px 40px 40px 40px;
+  padding: 16px 24px 16px 28px;
+  transform: translate(0px, 0px) rotate(0deg);
+  transition: 0.2s;
+  box-shadow: -4px -2px 16px 0px #ffffff, 4px 2px 16px 0px rgb(95 157 231 / 48%);
 }
 
+.momo:hover {
+  color: #516d91;
+  background-color: #e5edf5;
+  box-shadow: -2px -1px 8px 0px #ffffff, 2px 1px 8px 0px rgb(95 157 231 / 48%);
+}
 
+.momo:active {
+  box-shadow: none;
+}
+
+.papap-de-input-bottom {
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+}
 
 .pagination {
-   display: flex;
-   justify-content: center; 
-
+  display: flex;
+  justify-content: center;
 }
-  
-  .pagination a {
-    color: black;
-    float: left;
-    padding: 8px 16px;
-    text-decoration: none;
-    transition: background-color .3s;
-  }
-  
-  .pagination a.active {
-    background-color: #4CAF50;
-    color: white;
-  }
-  
-  .pagination a:hover:not(.active) {background-color: #ddd;}
- 
- .ppp{
+
+.pagination a {
+  color: black;
+  float: left;
+  padding: 8px 16px;
+  text-decoration: none;
+  transition: background-color 0.3s;
+}
+
+.pagination a:hover:not(.active) {
+  background-color: #ddd;
+}
+
+.ppp {
   width: 100px;
-    display: flex;
-    flex-direction: column;
-}  
+  display: flex;
+  flex-direction: column;
+}
 
 .loader {
   position: absolute;
@@ -93,7 +85,7 @@
   margin-top: -50px;
   border-radius: 5px;
   background: #1e3f57;
-  animation: dot1_ 3s cubic-bezier(0.55,0.3,0.24,0.99) infinite;
+  animation: dot1_ 3s cubic-bezier(0.55, 0.3, 0.24, 0.99) infinite;
 }
 
 .loader:nth-child(2) {
@@ -116,24 +108,27 @@
   border-radius: 0 0 5px 5px;
   background: #6bb2cd;
   animation-name: dot3_;
-} 
+}
 
- @keyframes dot1_ {
-  3%,97% {
+@keyframes dot1_ {
+  3%,
+  97% {
     width: 160px;
     height: 100px;
     margin-top: -50px;
     margin-left: -80px;
   }
 
-  30%,36% {
+  30%,
+  36% {
     width: 80px;
     height: 120px;
     margin-top: -60px;
     margin-left: -40px;
   }
 
-  63%,69% {
+  63%,
+  69% {
     width: 40px;
     height: 80px;
     margin-top: -40px;
@@ -142,21 +137,24 @@
 }
 
 @keyframes dot2_ {
-  3%,97% {
+  3%,
+  97% {
     height: 90px;
     width: 150px;
     margin-left: -75px;
     margin-top: -45px;
   }
 
-  30%,36% {
+  30%,
+  36% {
     width: 70px;
     height: 96px;
     margin-left: -35px;
     margin-top: -48px;
   }
 
-  63%,69% {
+  63%,
+  69% {
     width: 32px;
     height: 60px;
     margin-left: -16px;
@@ -165,14 +163,16 @@
 }
 
 @keyframes dot3_ {
-  3%,97% {
+  3%,
+  97% {
     height: 20px;
     width: 40px;
     margin-left: -20px;
     margin-top: 50px;
   }
 
-  30%,36% {
+  30%,
+  36% {
     width: 8px;
     height: 8px;
     margin-left: -5px;
@@ -180,12 +180,12 @@
     border-radius: 8px;
   }
 
-  63%,69% {
+  63%,
+  69% {
     width: 16px;
     height: 4px;
     margin-left: -8px;
     margin-top: -37px;
     border-radius: 10px;
   }
-
-}  
+}
