@@ -1,6 +1,7 @@
 import React, { useState, useEffect } from "react";
 // import React from "react";
-import "../Styles/ComponeneteDetalle.css"
+import "../Styles/ComponeneteDetalle.css";
+import { NavLink } from "react-router-dom";
 function ComponenteDetalle() {
   // const [pokemonData, setPokemonData] = useState(null);
   // useEffect(() => {
@@ -21,9 +22,11 @@ function ComponenteDetalle() {
   return (
     <div>
       <div>
-       <button className="botton-poke">
+        <NavLink to='/pokedex'>
+        <button className="botton-poke">
         <span>Pokemons</span>
        </button>
+        </NavLink>
       </div>
       <h4>Muy pronto info de los pokemones</h4>
     </div>
