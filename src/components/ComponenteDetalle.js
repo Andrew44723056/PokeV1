@@ -1,14 +1,10 @@
-// import React, { useState, useEffect } from "react";
-import React from "react";
+import React, { useState, useEffect } from "react";
+// import React from "react";
 
 function ComponenteDetalle() {
-  return <div>
-             <h4>Muy pronto info de los pokemones</h4>
-       </div>;
-
-
-  //     const [pokemonData, setPokemonData] = useState(null);
-  //     useEffect(() => {
+  
+  // const [pokemonData, setPokemonData] = useState(null);
+  // useEffect(() => {
   //       fetch ('https://pokeapi.co/api/v2/pokemon/bulbasaur/')
   //         .then((response) => response.json())
   //         .then((data) => setPokemonData(data))
@@ -23,6 +19,11 @@ function ComponenteDetalle() {
   //             <div></div>
   //             )}
   //       </div>
+  return <div>
+             <h4>Muy pronto info de los pokemones</h4>
+       </div>;
+
+
 }
 
 export default ComponenteDetalle;
