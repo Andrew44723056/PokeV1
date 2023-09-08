@@ -15,7 +15,7 @@ function AppRouter() {
         <Route path="/" element={<Home />} />
         <Route path="/about" element={<About />} />
         <Route path="/pokedex" element={<Pokedex />} />
-        <Route path="/detalle" element={<ComponenteDetalle />} /> 
+        <Route path="/detalle/:id" element={<ComponenteDetalle />} />
       </Routes>
     </div>
   );

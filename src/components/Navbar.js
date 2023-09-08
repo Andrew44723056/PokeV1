@@ -4,7 +4,6 @@ import "../Styles/HeaderStyles.css";
 function Navbar() {
   return (
     <nav>
-
       <ul className="lala">
         <li>
           <Link to="/">

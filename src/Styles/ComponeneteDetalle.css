@@ -1,41 +1,80 @@
 .botton-poke {
-    background: #fff;
-    border: none;
-    padding: 10px 20px;
-    display: inline-block;
-    font-size: 15px;
-    font-weight: 600;
-    width: 120px;
-    text-transform: uppercase;
-    cursor: pointer;
-    transform: skew(-21deg);
-    display: block;
-  }
-  
-  span {
-    display: inline-block;
-    transform: skew(21deg);
-  }
-  
-  .botton-poke::before {
-    content: '';
-    position: absolute;
-    top: 0;
-    bottom: 0;
-    right: 100%;
-    left: 0;
-    background: rgb(20, 20, 20);
-    opacity: 0;
-    z-index: -1;
-    transition: all 0.5s;
-  }
-  
-  .botton-poke:hover {
-    color: #fff;
-  }
-  
-  .botton-poke:hover::before {
-    left: 0;
-    right: 0;
-    opacity: 1;
-  }
+  position: relative;
+  width: 120px;
+  height: 40px;
+  background-color: #000;
+  display: flex;
+  align-items: center;
+  color: white;
+  /* flex-direction: column; */
+  justify-content: center;
+  border: none;
+  padding: 12px;
+  gap: 12px;
+  border-radius: 8px;
+  cursor: pointer;
+  margin: 10px;
+}
+
+.botton-poke::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  left: -4px;
+  top: -1px;
+  margin: auto;
+  width: 128px;
+  height: 48px;
+  border-radius: 10px;
+  background: linear-gradient(-45deg, #e81cff 0%, #40c9ff 100% );
+  z-index: -10;
+  pointer-events: none;
+  transition: all 0.6s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+}
+
+.botton-poke::after {
+  content: "";
+  z-index: -1;
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(-45deg, #fc00ff 0%, #00dbde 100% );
+  transform: translate3d(0, 0, 0) scale(0.95);
+  filter: blur(20px);
+}
+
+.botton-poke:hover::after {
+  filter: blur(30px);
+}
+
+.botton-poke:hover::before {
+  transform: rotate(-180deg);
+}
+
+.botton-poke:active::before {
+  scale: 0.7;
+}
+
+.card-detalles{
+  width: 200px;
+}
+
+.card2 {
+
+  width: 190px;
+  height: 220px;
+  border-radius: 20px;
+  padding: 5px;
+  box-shadow: rgba(151, 65, 252, 0.2) 0 15px 30px -5px;
+  background-image: linear-gradient(144deg,#AF40FF, #5B42F3 50%,#00DDEB);
+}
+
+.card__content {
+  background: rgb(5, 6, 45);
+  border-radius: 17px;
+  width: 100%;
+  height: 100%;
+}
+.papa2{
+  display: flex;
+  justify-content: center;
+}
