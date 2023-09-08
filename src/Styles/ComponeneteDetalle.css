@@ -76,5 +76,6 @@
 }
 .papa2{
   display: flex;
-  justify-content: center;
+  /* justify-content: center; */
+  margin: 50px;
 }

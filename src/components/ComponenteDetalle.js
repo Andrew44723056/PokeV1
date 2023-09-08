@@ -24,7 +24,7 @@ function ComponenteDetalle() {
           <div>
             <div>
               <NavLink to="/pokedex">
-                <button className="botton-poke">Pokemons</button>
+                <button className="botton-poke">Pokedex</button>
               </NavLink>
             </div>
           </div>
@@ -43,7 +43,9 @@ function ComponenteDetalle() {
               </div>
             </div>
           </div>
-          <p>{pokemonData.name}</p>{" "}
+          <p>{pokemonData.name}</p>
+          {/* <p>{pokemonData.}</p> */}
+
         </div>
       ) : (
         <p>Cargando información ...</p>
