@@ -31,6 +31,7 @@ async function getPokemonDatailByUrl(url) {
   try {
     const response = await fetch(url);
     const data = await response.json();
+    
     const id = data.id;
     return {
       id,

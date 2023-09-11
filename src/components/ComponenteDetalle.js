@@ -15,7 +15,8 @@ function ComponenteDetalle() {
       .then((response) => response.json())
       .then((data) => setPokemonData(data))
       .catch((error) => console.error("Error fetching data:", error));
-  }, []);
+  
+    }, []);
 
   return (
     <div className="img2">
@@ -43,8 +44,21 @@ function ComponenteDetalle() {
               </div>
             </div>
           </div>
+          <div className="Info-papa">
+          <h3 className="info">Nombre</h3>
+          <hr className="info2"></hr>
           <p className="info">{pokemonData.name}</p>
-          <p>{pokemonData.name}</p>
+          <h3 className="info">Tipo</h3>
+          <hr className="info2"></hr>
+           <p className="info">{pokemonData.types[0].type.name} </p>
+          <h3 className="info">Peso</h3>
+          <hr className="info2"></hr>
+           <p className="info">{pokemonData.weight} </p>
+          <h3 className="info">Altura</h3>
+          <hr className="info2"></hr>
+           <p className="info">{pokemonData.height} </p>
+           </div>
+          
         </div>
       ) : (
         <p>Cargando información ...</p>
