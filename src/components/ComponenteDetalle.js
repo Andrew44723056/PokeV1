@@ -18,13 +18,13 @@ function ComponenteDetalle() {
   }, []);
 
   return (
-    <div>
+    <div className="img2">
       {pokemonData ? (
         <div>
           <div>
             <div>
               <NavLink to="/pokedex">
-                <button className="botton-poke">Pokedex</button>
+                <button className="botton-poke">back</button>
               </NavLink>
             </div>
           </div>
@@ -43,9 +43,8 @@ function ComponenteDetalle() {
               </div>
             </div>
           </div>
+          <p className="info">{pokemonData.name}</p>
           <p>{pokemonData.name}</p>
-          {/* <p>{pokemonData.}</p> */}
-
         </div>
       ) : (
         <p>Cargando información ...</p>

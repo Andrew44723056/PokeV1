@@ -3,9 +3,13 @@ import "../Styles/ComponenteLista.css";
 import { getPokemonList } from "../components/Api";
 import { ComponenteCarta } from "./ComponenteCarta";
 
+import Pagination from "@mui/material/Pagination";
+import Stack from "@mui/material/Stack";
+
 function ComponenteLista() {
   const [pokemonData, setPokemonData] = useState(null);
   const [isLoading, setisLoading] = useState(false);
+
   useEffect(() => {
     const fetchPokemon = async () => {
       try {
@@ -24,6 +28,24 @@ function ComponenteLista() {
 
     fetchPokemon();
   }, []);
+
+  const handlePagination = async (e) => {
+    var value = e.target.textContent;
+    console.log(value);
+    if (value == 1) {
+        var newUrl = 'https://pokeapi.co/api/v2/pokemon?limit=20';
+        var response = await getPokemonList(newUrl)
+        var data = response.array;
+        setPokemonData(data);
+
+    } else {
+        var newUrl =  `https:pokeapi.co/api/v2/pokemon?offset=${(value - 1) * 20}&limit=20`;
+        var response = await getPokemonList(newUrl)
+        var data = response.array;
+        setPokemonData(data);
+
+    }
+}
 
   return (
     <div>
@@ -65,14 +87,14 @@ function ComponenteLista() {
         </div>
       )}
       <div class="pagination">
-        <a href="#">Previous</a>
-        <a href="#">1</a>
-        <a href="#">2</a>
-        <a href="#">3</a>
-        <a href="#">4</a>
-        <a href="#">5</a>
-        <a href="#">6</a>
-        <a href="#">Next</a>
+        <Stack spacing={2}>
+          <Pagination
+            count={50}
+            variant="outlined"
+            color="primary"
+            onClick={handlePagination}
+          />
+        </Stack>
       </div>
     </div>
   );

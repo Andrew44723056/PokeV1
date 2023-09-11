@@ -4,12 +4,13 @@ export async function getPokemonList(url) {
   try {
     const response = await fetch(url);
     const data = await response.json();
-
+    
     if (data.results && data.results.length) {
       for (const pokemon of data.results) {
         const url = pokemon.url;
         const detaiPokemon = await getPokemonDatailByUrl(url);
         pokemonData.push(detaiPokemon);
+
       }
     }
     result = {

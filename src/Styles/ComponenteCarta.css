@@ -5,9 +5,7 @@
     width: 147px;
     width: 100px;
     height: 172px;
-    background: rgba(217, 217, 217, 0.58);
-    /* border: 1px solid rgb(248, 6, 6); */
-    box-shadow: 12px 17px 51px rgba(0, 0, 0, 0.22);
+    background: darkgrey;    box-shadow: 12px 17px 51px rgba(0, 0, 0, 0.22);
     backdrop-filter: blur(6px);
     border-radius: 20px;
     text-align: center;
@@ -31,6 +29,3 @@
     display: inline-block;
   }
 
-
-
-  
