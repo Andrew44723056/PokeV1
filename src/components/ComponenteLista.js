@@ -2,6 +2,7 @@ import React, { useState, useEffect } from "react";
 import "../Styles/ComponenteLista.css";
 import { getPokemonList } from "../components/Api";
 import { ComponenteCarta } from "./ComponenteCarta";
+// import handlePagination from "./Pagination";
 
 import Pagination from "@mui/material/Pagination";
 import Stack from "@mui/material/Stack";
@@ -70,13 +71,13 @@ function ComponenteLista() {
           value={filterPokemones}
           onChange={handleSearch}
         ></input>
-          {/* <input className="piña" placeholder="Buscar"></input> */}
         </div>
       </div>
       {isLoading ? (
         filteredPokemon.map((item, index, ) => {
           return (
             <ComponenteCarta key={`${item.name}-${index}`} pokemonData={item} />
+            
           );
         })
       ) : (
@@ -87,7 +88,7 @@ function ComponenteLista() {
           <div className="loader"></div>
         </div>
       )}
-      <div class="pagination">
+       <div class="pagination">
         <Stack spacing={2}>
           <Pagination
             count={50}
@@ -96,7 +97,7 @@ function ComponenteLista() {
             onClick={handlePagination}
           />
         </Stack>
-      </div>
+      </div> 
     </div>
   );
 }

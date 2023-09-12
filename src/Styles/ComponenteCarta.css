@@ -5,7 +5,8 @@
     width: 147px;
     width: 100px;
     height: 172px;
-    background: darkgrey;    box-shadow: 12px 17px 51px rgba(0, 0, 0, 0.22);
+    background: darkgrey;    box-shadow: 12px 17px 51px rgba(0, 0, 0, 0.22) ;
+    /* background-color: #847770; */
     backdrop-filter: blur(6px);
     border-radius: 20px;
     text-align: center;
@@ -29,3 +30,56 @@
     display: inline-block;
   }
 
+  .boton-cartas{
+    padding: 10px;
+  }
+
+  .boton-cartas2 {
+    width: 50px;
+    height: 50px;
+    border-radius: 10px;
+    border: none;
+    background-color: transparent;
+    position: relative;
+  }
+  
+  .boton-cartas2::after {
+    /* content: 'like'; */
+    width: fit-content;
+    height: fit-content;
+    position: absolute;
+    font-size: 15px;
+    color: white;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    opacity: 0;
+    visibility: hidden;
+    transition: .2s linear;
+    top: 115%;
+  }
+  
+  .icon {
+    width: 30px;
+    height: 30px;
+    transition: .2s linear;
+  }
+  
+  .icon path {
+    fill: white;
+    transition: .2s linear;
+  }
+  
+  .boton-cartas2:hover > .icon {
+    transform: scale(1.2);
+  }
+  
+  .boton-cartas2:hover > .icon path {
+    fill: rgb(69, 34, 167);
+  }
+  
+  .boton-cartas2:hover::after {
+    visibility: visible;
+    opacity: 1;
+    top: 105%;
+  }
+  
+  
