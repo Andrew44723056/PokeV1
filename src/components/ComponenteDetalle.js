@@ -41,22 +41,24 @@ function ComponenteDetalle() {
                   }
                   alt="Pikachu"
                 />
+                {/* <h2>{pokemonData.stats}</h2> */}
+
               </div>
             </div>
           </div>
           <div className="Info-papa">
           <h3 className="info">Nombre</h3>
-          <hr className="info2"></hr>
           <p className="info">{pokemonData.name}</p>
+          <hr className="info2"></hr>
           <h3 className="info">Tipo</h3>
-          <hr className="info2"></hr>
            <p className="info">{pokemonData.types[0].type.name} </p>
+          <hr className="info2"></hr>
           <h3 className="info">Peso</h3>
-          <hr className="info2"></hr>
            <p className="info">{pokemonData.weight} </p>
-          <h3 className="info">Altura</h3>
           <hr className="info2"></hr>
+          <h3 className="info">Altura</h3>
            <p className="info">{pokemonData.height} </p>
+          {/* <hr className="info2"></hr> */}
            </div>
           
         </div>
