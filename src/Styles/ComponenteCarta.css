@@ -5,7 +5,7 @@
     width: 147px;
     width: 100px;
     height: 172px;
-    background: darkgrey;    box-shadow: 12px 17px 51px rgba(0, 0, 0, 0.22) ;
+    background: whitesmoke;;
     /* background-color: #847770; */
     backdrop-filter: blur(6px);
     border-radius: 20px;
@@ -39,7 +39,7 @@
     height: 50px;
     border-radius: 10px;
     border: none;
-    background-color: transparent;
+    background-color: red;
     position: relative;
   }
   

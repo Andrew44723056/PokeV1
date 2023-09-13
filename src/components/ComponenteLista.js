@@ -102,3 +102,63 @@ function ComponenteLista() {
   );
 }
 export { ComponenteLista };
+
+export async function postPokemonFavorite(pokemonId) {
+  try{
+    
+    return fetch ("https://650078ce18c34dee0cd4f8ce.mockapi.io/Favorites/",
+    {
+      method:"POST",
+      headers: {
+        "content-type": "application/json",
+      },
+      body: JSON.stringify({
+        idPokemon: pokemonId
+      })
+    }
+    
+    
+    ).then((response) =>{
+       if (response.ok) {
+        console.log("datos guardados correctamente");
+       }else{
+        throw 'error';
+       }
+    })
+
+  } catch (error) {
+    console.log("Hubo un error al llamar al api");
+    return[]
+  } 
+}
+
+export async function getPokemonFavorite() {
+  try{
+       const requestPokemon = await fetch("https://650078ce18c34dee0cd4f8ce.mockapi.io/Favorites/")
+       const postPokemonFavoritosData = await requestPokemon.json();
+       return postPokemonFavoritosData;
+  } catch (error) {
+    console.log("Hubo un error al llamar al api");
+    return[]
+  } 
+}
+
+export async function deletePokemonFavorite(idP) {
+  try{ 
+    const getPokemones = await getPokemonesFavoritos();
+    let deleteId = '';
+
+    const verificar = getPokemones.some(({idPokemon,id}) =>{
+      if (idPokemon == idP){
+       deleteId = id;
+      }
+    })    
+     return verificar
+
+
+
+  } catch (error) {
+    console.log("Hubo un error al llamar al api");
+    return[]
+  } 
+}
