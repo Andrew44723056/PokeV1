@@ -43,3 +43,6 @@ async function getPokemonDatailByUrl(url) {
     throw error;
   }
 }
+
+
+

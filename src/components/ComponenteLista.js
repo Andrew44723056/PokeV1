@@ -143,22 +143,50 @@ export async function getPokemonFavorite() {
   } 
 }
 
-export async function deletePokemonFavorite(idP) {
-  try{ 
-    const getPokemones = await getPokemonesFavoritos();
-    let deleteId = '';
-
-    const verificar = getPokemones.some(({idPokemon,id}) =>{
-      if (idPokemon == idP){
-       deleteId = id;
-      }
-    })    
-     return verificar
+export async function deletePokemonesFavorite(idP) {
+  try {
+      const getPokemones = await getPokemonFavorite();
+      let deleteId = '';
 
 
+      const verificar = getPokemones.some(({idPokemon,id}) =>{
+        console.log(idPokemon)
+          if (idPokemon == idP) {
+              deleteId = id;
+          }
+      })
 
-  } catch (error) {
-    console.log("Hubo un error al llamar al api");
-    return[]
-  } 
+      console.log(verificar);
+
+      return fetch(`https://650078ce18c34dee0cd4f8ce.mockapi.io/Pokemonslil/Favorites/${deleteId}`,
+        {
+          method: "DELETE",
+          headers: {
+            "Content-Type": "application/json",
+          },
+        }
+      ).then((res) => {
+        if (res.ok) {
+          console.log("Datos eliminados en mockupApi");
+        } else {
+          throw Error;
+        }
+      });
+
+
+  } catch (error) { //Se ejecuta si hubo algun error
+      console.error("Hubo un error al llamar al api")
+      return []
+  }
+
 }
+
+
+
+
+
+
+
+
+
+
