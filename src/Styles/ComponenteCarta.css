@@ -35,148 +35,111 @@
 
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-.Btn {
-  width: 140px;
-  height: 35px;
-  display: flex;
-  align-items: center;
-  justify-content: flex-start;
-  border: none;
-  border-radius: 5px;
-  overflow: hidden;
-  box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.089);
-  cursor: pointer;
-  background-color: transparent;
-}
-
-.leftContainer {
-  width: 60%;
-  height: 100%;
-  background-color: rgb(238, 0, 0);
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  gap: 8px;
-}
-
-.leftContainer .like {
-  color: white;
-  font-weight: 600;
-}
-
-.likeCount {
-  width: 40%;
-  height: 100%;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  color: rgb(238, 0, 0);
-  font-weight: 600;
-  position: relative;
-  background-color: white;
-}
-
-.likeCount::before {
-  height: 8px;
-  width: 8px;
-  position: absolute;
-  content: "";
-  background-color: rgb(255, 255, 255);
-  transform: rotate(45deg);
-  left: -4px;
-}
-
-.Btn:hover .leftContainer {
-  background-color: rgb(219, 0, 0);
-}
-
-.Btn:active .leftContainer {
-  background-color: rgb(201, 0, 0);
-}
-
-.Btn:active .leftContainer svg {
-  transform: scale(1.15);
-  transform-origin: top;
-}
-
-
-
-
-
-
-
-
-.noselect {
-  width: 150px;
-  height: 50px;
-  cursor: pointer;
-  display: flex;
-  align-items: center;
-  background: red;
-  border: none;
-  border-radius: 5px;
-  box-shadow: 1px 1px 3px rgba(0,0,0,0.15);
-  background: #e62222;
- }
- 
- .noselect, button span {
-  transition: 200ms;
- }
- 
- .noselect .text {
-  transform: translateX(35px);
-  color: white;
-  font-weight: bold;
- }
- 
- .noselect .icon {
-  position: absolute;
-  border-left: 1px solid #c41b1b;
-  transform: translateX(110px);
+.bookmarkBtn {
+  width: 100px;
   height: 40px;
-  width: 40px;
+  border-radius: 40px;
+  border: 1px solid rgba(255, 255, 255, 0.349);
+  background-color: rgb(12, 12, 12);
   display: flex;
   align-items: center;
   justify-content: center;
- }
- 
- .noselect svg {
-  width: 15px;
-  fill: #eee;
- }
- 
- .noselect:hover {
-  background: #ff3636;
- }
- 
- .noselect:hover .text {
-  color: transparent;
- }
- 
- .noselect:hover .icon {
-  width: 150px;
-  border-left: none;
-  transform: translateX(0);
- }
- 
- .noselect:focus {
-  outline: none;
- }
- 
- .noselect:active .icon svg {
-  transform: scale(0.8);
- }
+  cursor: pointer;
+  transition-duration: .3s;
+  overflow: hidden;
+}
+
+.IconContainer {
+  width: 30px;
+  height: 30px;
+  background: linear-gradient(to bottom, rgb(255, 136, 255),rgb(172, 70, 255));
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+  z-index: 2;
+  transition-duration: .3s;
+}
+
+.icon {
+  border-radius: 1px;
+}
+
+.text {
+  height: 100%;
+  width: 60px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: white;
+  z-index: 1;
+  transition-duration: .3s;
+  font-size: 1.04em;
+}
+
+.bookmarkBtn:hover .IconContainer {
+  width: 90px;
+  border-radius: 40px;
+  transition-duration: .3s;
+}
+
+.bookmarkBtn:hover .text {
+  transform: translate(10px);
+  width: 0;
+  font-size: 0;
+  transition-duration: .3s;
+}
+
+.bookmarkBtn:active {
+  transform: scale(0.95);
+  transition-duration: .3s;
+}
+
+
+
+
+.btn {
+  background-color: transparent;
+  position: relative;
+  border: none;
+}
+
+.btn::after {
+  content: 'delete';
+  position: absolute;
+  top: -130%;
+  left: 50%;
+  transform: translateX(-50%);
+  width: fit-content;
+  height: fit-content;
+  background-color: rgb(168, 7, 7);
+  padding: 4px 8px;
+  border-radius: 5px;
+  transition: .2s linear;
+  transition-delay: .2s;
+  color: white;
+  text-transform: uppercase;
+  font-size: 12px;
+  opacity: 0;
+  visibility: hidden;
+}
+
+.icon2 {
+  transform: scale(1.2);
+  transition: .2s linear;
+}
+
+.btn:hover > .icon {
+  transform: scale(1.5);
+}
+
+.btn:hover > .icon path {
+  fill: rgb(168, 7, 7);
+}
+
+.btn:hover::after {
+  visibility: visible;
+  opacity: 1;
+  top: -160%;
+}
